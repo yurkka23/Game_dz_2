@@ -257,9 +257,6 @@ namespace Game_dz_2
         }
         static void Main(string[] args)
         {
-            var a = new SuperPowerGenerator();
-            Console.WriteLine(a.GenrateAmountSuperPower());
-            Console.WriteLine(a.GenrateAmountSuperPower());
             Console.WriteLine("Game Start!\n");
             var generateSuperPower = new SuperPowerGenerator();
             Console.WriteLine("Choose first warrior: Bowman, Ninja, Samurai, Knight");
