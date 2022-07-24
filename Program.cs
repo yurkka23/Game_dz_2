@@ -220,11 +220,77 @@ namespace Game_dz_2
 
 
     }
+
+    //Feature 5
+
     class Program
     {
+        public static Warrior CreateWarrior(string nameWarrior)
+        {
+            switch (nameWarrior)
+            {
+                case "Bowman": return new Bowman();
+                case "Ninja": return new Ninja();
+                case "Samurai": return new Samurai();
+                case "Knight": return new Knight();
+                default: throw new Exception();
+            }
+        }
+        public static void AdditionalSuperPower(Warrior player, int power, string choseSuperPower)
+        {
+            switch (choseSuperPower)
+            {
+                case "Hp":
+                    ISuperPower superPowerHp = new SuperHp();
+                    superPowerHp.AddSuperPower(player, power);
+                    break;
+                case "Defence":
+                    ISuperPower superPowerDef = new SuperDefence();
+                    superPowerDef.AddSuperPower(player, power);
+                    break;
+                case "Power":
+                    ISuperPower superPowerPow = new SuperPower();
+                    superPowerPow.AddSuperPower(player, power);
+                    break;
+                default: throw new Exception();
+            }
+        }
         static void Main(string[] args)
         {
-            
+            var a = new SuperPowerGenerator();
+            Console.WriteLine(a.GenrateAmountSuperPower());
+            Console.WriteLine(a.GenrateAmountSuperPower());
+            Console.WriteLine("Game Start!\n");
+            var generateSuperPower = new SuperPowerGenerator();
+            Console.WriteLine("Choose first warrior: Bowman, Ninja, Samurai, Knight");
+            string inputPlayer1 = Console.ReadLine();
+            Warrior player1 = CreateWarrior(inputPlayer1);
+            Console.WriteLine($"First player chose {inputPlayer1}");
+            Console.WriteLine($"{player1.ToString()}");
+
+            Console.WriteLine("\nChoose second warrior: Bowman, Ninja, Samurai, Knight");
+            string inputPlayer2 = Console.ReadLine();
+            Warrior player2 = CreateWarrior(inputPlayer2);
+            Console.WriteLine($"Second player chose {inputPlayer2}");
+            Console.WriteLine($"{player2.ToString()}\n");
+
+            int player1SuperPower = generateSuperPower.GenrateAmountSuperPower();
+            Console.WriteLine($"Generater Super Power for player 1 is {player1SuperPower} \nChoose which force it will be applied to : Hp, Defence, Power");
+            string input1SuperPower = Console.ReadLine();
+            AdditionalSuperPower(player1, player1SuperPower, input1SuperPower);
+
+
+            int player2SuperPower = generateSuperPower.GenrateAmountSuperPower();
+            Console.WriteLine($"Generater Super Power for player 2 is {player2SuperPower} \nChoose which force it will be applied to : Hp, Defence, Power");
+            string input2SuperPower = Console.ReadLine();
+            AdditionalSuperPower(player2, player2SuperPower, input2SuperPower);
+
+            Console.WriteLine($"After Super Power: {player1.ToString()}");
+            Console.WriteLine($"After Super Power: {player2.ToString()}\n");
+
+            Battle.Fight(player1, player2);
+            Console.WriteLine("Game Over!");
+
         }
     }
 }
