@@ -29,6 +29,7 @@ namespace Game_dz_2
         public int Hp { get; set; } = 100;
         public int Defence { get; set; }
         public int Power { get; set; }
+        public virtual void AddSuperPower(ISuperPower superPower, int power) { }
 
     }
 
@@ -43,6 +44,10 @@ namespace Game_dz_2
         {
             return $"Hp: {Hp}, Defence : {Defence}, Power: {Power}";
         }
+        public override void AddSuperPower(ISuperPower superPower, int power)
+        {
+            superPower.AddSuperPower(this, power);
+        }
     }
     class Ninja : Warrior
     {
@@ -54,6 +59,10 @@ namespace Game_dz_2
         public override string ToString()
         {
             return $"Hp: {Hp}, Defence : {Defence}, Power: {Power}";
+        }
+        public override void AddSuperPower(ISuperPower superPower, int power)
+        {
+            superPower.AddSuperPower(this, power);
         }
 
     }
@@ -68,6 +77,10 @@ namespace Game_dz_2
         {
             return $"Hp: {Hp}, Defence : {Defence}, Power: {Power}";
         }
+        public override void AddSuperPower(ISuperPower superPower, int power)
+        {
+            superPower.AddSuperPower(this, power);
+        }
     }
     class Knight : Warrior
     {
@@ -79,6 +92,37 @@ namespace Game_dz_2
         public override string ToString()
         {
             return $"Hp: {Hp}, Defence : {Defence}, Power: {Power}";
+        }
+        public override void AddSuperPower(ISuperPower superPower, int power)
+        {
+            superPower.AddSuperPower(this, power);
+        }
+    }
+    //Feature 3
+    interface ISuperPower
+    {
+        void AddSuperPower(Warrior war, int power);
+    }
+
+    class SuperHp : ISuperPower
+    {
+        public void AddSuperPower(Warrior war, int power)
+        {
+            war.Hp += power;
+        }
+    }
+    class SuperDefence : ISuperPower
+    {
+        public void AddSuperPower(Warrior war, int power)
+        {
+            war.Defence += power;
+        }
+    }
+    class SuperPower : ISuperPower
+    {
+        public void AddSuperPower(Warrior war, int power)
+        {
+            war.Power += power;
         }
     }
     class Program
