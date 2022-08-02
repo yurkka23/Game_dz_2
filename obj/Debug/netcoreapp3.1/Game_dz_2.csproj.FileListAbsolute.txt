@@ -1,0 +1,13 @@
+C:\Users\Юра\source\repos\Game_dz_2\Game_dz_2\bin\Debug\netcoreapp3.1\Game_dz_2.exe
+C:\Users\Юра\source\repos\Game_dz_2\Game_dz_2\bin\Debug\netcoreapp3.1\Game_dz_2.deps.json
+C:\Users\Юра\source\repos\Game_dz_2\Game_dz_2\bin\Debug\netcoreapp3.1\Game_dz_2.runtimeconfig.json
+C:\Users\Юра\source\repos\Game_dz_2\Game_dz_2\bin\Debug\netcoreapp3.1\Game_dz_2.runtimeconfig.dev.json
+C:\Users\Юра\source\repos\Game_dz_2\Game_dz_2\bin\Debug\netcoreapp3.1\Game_dz_2.dll
+C:\Users\Юра\source\repos\Game_dz_2\Game_dz_2\bin\Debug\netcoreapp3.1\Game_dz_2.pdb
+C:\Users\Юра\source\repos\Game_dz_2\Game_dz_2\obj\Debug\netcoreapp3.1\Game_dz_2.csprojAssemblyReference.cache
+C:\Users\Юра\source\repos\Game_dz_2\Game_dz_2\obj\Debug\netcoreapp3.1\Game_dz_2.AssemblyInfoInputs.cache
+C:\Users\Юра\source\repos\Game_dz_2\Game_dz_2\obj\Debug\netcoreapp3.1\Game_dz_2.AssemblyInfo.cs
+C:\Users\Юра\source\repos\Game_dz_2\Game_dz_2\obj\Debug\netcoreapp3.1\Game_dz_2.csproj.CoreCompileInputs.cache
+C:\Users\Юра\source\repos\Game_dz_2\Game_dz_2\obj\Debug\netcoreapp3.1\Game_dz_2.dll
+C:\Users\Юра\source\repos\Game_dz_2\Game_dz_2\obj\Debug\netcoreapp3.1\Game_dz_2.pdb
+C:\Users\Юра\source\repos\Game_dz_2\Game_dz_2\obj\Debug\netcoreapp3.1\Game_dz_2.genruntimeconfig.cache
